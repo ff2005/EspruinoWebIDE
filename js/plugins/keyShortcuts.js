@@ -42,6 +42,7 @@
     "Ctrl + Q" : "Rename variable",
     "Ctrl + ." : "Select all occurrences of a variable",
     "Alt + ." : "Jump to definition (Alt-, to jump back)",
+    "Ctrl + E" : "Open / refresh emulator",
   }
 
   function init() {

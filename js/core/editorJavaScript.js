@@ -114,6 +114,12 @@
         },
         "Ctrl-B": function(cm) {
           cm.beautify();
+        },
+        "Ctrl-E": function() {
+          Espruino.Core.MenuPortSelector.ensureConnected(function() {
+            Espruino.callProcessor("sending");
+            Espruino.Core.Code.getEspruinoCode(Espruino.Core.CodeWriter.writeToEspruino);
+          });
         }
       }
     });
