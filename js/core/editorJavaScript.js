@@ -124,6 +124,12 @@
             cm.replaceSelection(cm.getOption("indentWithTabs")? "\t":
               " ".repeat(cm.getOption("indentUnit")), "end", "+input");
           }
+        },
+        "Ctrl-E": function() {
+          Espruino.Core.MenuPortSelector.ensureConnected(function() {
+            Espruino.callProcessor("sending");
+            Espruino.Core.Code.getEspruinoCode(Espruino.Core.CodeWriter.writeToEspruino);
+          });
         }
       }
     });
